@@ -44,7 +44,7 @@ namespace dotnet_sdg_template.Controllers
 
     // PUT: api/Location/5
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutLocation(int id, Location location)
+    public async Task<IActionResult> PutLocation(int id, [FromBody] Location location)
     {
       if (id != location.Id)
       {
@@ -69,7 +69,7 @@ namespace dotnet_sdg_template.Controllers
         }
       }
 
-      return NoContent();
+      return Ok(location);
     }
 
     // POST: api/Location
