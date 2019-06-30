@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using fridaytest;
 using fridaytest.Model;
 
-namespace dotnet_sdg_template.Controllers
+namespace fridaytest.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
