@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace fridaytest.Model
 {
@@ -9,6 +10,10 @@ namespace fridaytest.Model
     public DateTime StartDate { get; set; }
 
     public DateTime EndDate { get; set; }
+
+
+    public List<fridaytest.Model.Destination> Destinations { get; set; } = new List<Destination>();
+
 
 
   }

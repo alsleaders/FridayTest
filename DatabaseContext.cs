@@ -46,5 +46,6 @@ namespace fridaytest
 
     public DbSet<Location> Locations { get; set; }
     public DbSet<Trip> Trips { get; set; }
+    public DbSet<Destination> Destinations { get; set; }
   }
 }

@@ -7,5 +7,9 @@ namespace fridaytest.Model
     public float Long { get; set; }
     public float Lat { get; set; }
     public bool Visited { get; set; }
+
+
+    public int? DestinationId { get; set; }
+    public Destination Destination { get; set; }
   }
 }
