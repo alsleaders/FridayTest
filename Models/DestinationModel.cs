@@ -10,7 +10,8 @@ namespace fridaytest.Model
 
     public int? TripId { get; set; }
     public Trip Trip { get; set; }
+    public int? LocationId { get; set; }
 
-    public List<fridaytest.Model.Location> Location { get; set; } = new List<Location>();
+    public Location Location { get; set; }
   }
 }

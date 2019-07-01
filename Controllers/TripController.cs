@@ -17,11 +17,25 @@ namespace fridaytest.Controllers
       _context = context;
     }
 
-    // GET: api/Location
+    // GET: api/Trip
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Trip>>> GetTrips()
     {
       return await _context.Trips.ToListAsync();
+    }
+
+    // GET: api/Trip/5
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Trip>> GetTrip(int id)
+    {
+      var trip = await _context.Trips.Include(i => i.Destinations).ThenInclude(i => i.Location).FirstOrDefaultAsync(f => f.Id == id);
+
+      if (trip == null)
+      {
+        return NotFound();
+      }
+
+      return trip;
     }
 
 
